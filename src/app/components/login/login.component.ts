@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
     })
   }
   hideShowPass() {
-    debugger
     
     this.isText = !this.isText;
     this.isText ? this.eyeIcon = "fa-eye" : this.eyeIcon = "fa-eye-slash";
