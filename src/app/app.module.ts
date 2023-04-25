@@ -8,13 +8,17 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeDashboardComponent } from './components/employee-dashboard/employee-dashboard.component';
+import { EmployeeComponent } from './components/employee/employee.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    EmployeeDashboardComponent
+    EmployeeDashboardComponent,
+    EmployeeComponent,
+    UpdateEmployeeComponent
   ],
   imports: [
     BrowserModule,

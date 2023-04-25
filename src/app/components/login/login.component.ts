@@ -11,7 +11,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   type: string = "password"
-  isText: boolean = false
+  isText: boolean = false;
+  invalidUser:boolean = false;
   eyeIcon: string = "fa-eye-slash";
   loginForm!: FormGroup;
   constructor(private fb: FormBuilder,private auth:AuthService,private router:Router) { }
@@ -35,8 +36,10 @@ export class LoginComponent implements OnInit {
           alert(res.message)
           this.loginForm.reset();
           this.router.navigate(['employee-dashboard'])
+          this.invalidUser=false;
         },
         error:(err)=>{
+          this.invalidUser=true;
           alert(err?.error.message)
         }
       })
@@ -44,7 +47,8 @@ export class LoginComponent implements OnInit {
     else {
 
       ValidateForm.validateAllFormFields(this.loginForm);
-      alert("Form is invalid");
+      this.invalidUser=true;
+       alert("Form is invalid");
     }
   }
  

@@ -48,8 +48,6 @@
                                 <small *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')" class="text-danger">Password is Required</small>
                                 <!-- (click)="onSubmit()" -->
                                 <button  type="submit" class="btn btn-primary btn-block mt-4 w-100" (click)="onSignUp()">Sign Up</button>
-                               
-                                
                                 <div class="text-center pt-4 text-muted">Already have account?
                                     <a id="forget" routerLink="/login">Login</a>
                                 </div>
